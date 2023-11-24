@@ -35,7 +35,7 @@ class _HomeMyAppState extends State<HomeMyApp> {
       ),
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
-        title: Text('Mercado Livre', style: TextStyle(color: Colors.black)),
+        title: Text('Mercadão livre ', style: TextStyle(color: Colors.black)),
         backgroundColor: Color.fromRGBO(255, 241, 89, 1),
         actions: <Widget>[
           IconButton(

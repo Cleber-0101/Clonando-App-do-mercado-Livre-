@@ -66,6 +66,9 @@ class AppSearchBar extends SearchDelegate<String> {
           return ListTile(
             leading: Icon(Icons.youtube_searched_for),
             title: Text(results[index]),
+            onTap: () {
+              print(results[index]);
+            },
           );
         });
   }

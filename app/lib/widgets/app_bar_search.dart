@@ -23,8 +23,13 @@ class AppSearchBar extends SearchDelegate<String> {
     'Torradeira'
   ];
 
-  //salva local no proprio aplicativo
-  final recenteSearchs = ['Mackbook', 'Iphone', 'ipad'];
+  final recenteSearchs = [
+    'Micro-ondas',
+    'Secador de Cabelo',
+    'Ventilador',
+    'Chaleira Elétrica',
+    'Torradeira'
+  ];
 
   @override
   List<Widget>? buildActions(BuildContext context) {

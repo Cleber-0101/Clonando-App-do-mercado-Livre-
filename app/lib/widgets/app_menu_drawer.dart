@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppMenuDrawer extends StatelessWidget {
-  const AppMenuDrawer({super.key});
+  const AppMenuDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,15 +39,43 @@ class AppMenuDrawer extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 20.0, fontWeight: FontWeight.bold),
                       ),
-                      Text('Nivel Avançado'),
+                      Text('Nível Avançado'),
                     ],
                   ),
                 )
               ],
             ),
           ),
-        )
+        ),
+        _itemDrawer(icon: Icon(Icons.home), text: 'Home'),
+        _itemDrawer(icon: Icon(Icons.home), text: 'Pagina 02'),
+        Divider(
+          color: Colors.grey,
+        ),
+        _itemDrawer(icon: Icon(Icons.label_important), text: 'Pagina 03'),
+        _itemDrawer(icon: Icon(Icons.hotel), text: 'Pagina 04'),
+        _itemDrawer(icon: Icon(Icons.exposure_zero), text: 'Pagina 05'),
+        _itemDrawer(icon: Icon(Icons.face), text: 'Pagina 06'),
+        Divider(
+          color: Colors.grey,
+        ),
+        _itemDrawer(icon: Icon(Icons.exit_to_app), text: 'Sair'),
       ],
+    );
+  }
+
+  // Método de criação
+  Widget _itemDrawer({Icon? icon, String? text, String? badge = ''}) {
+    return ListTile(
+      leading: IconTheme(
+        child: icon!,
+        data: IconThemeData(color: Colors.black),
+      ),
+      title: Text(
+        text!,
+        style: TextStyle(color: Colors.black),
+      ),
+      onTap: () {},
     );
   }
 }
